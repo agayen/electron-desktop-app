@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow , Menu} = require('electron')
 const path = require('node:path')
 
 function createWindow () {
@@ -9,8 +9,7 @@ function createWindow () {
       preload: path.join(__dirname, 'src/preload.js')
     }
   })
-
-  win.loadFile('src/index.html')
+  win.loadURL('https://admin-apollo4.dev.cogoport.io/v2/en/login?redirect_path=%2Fcogo-one%2Fomni-channel')
 }
 
 app.whenReady().then(() => {
